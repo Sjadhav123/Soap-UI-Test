@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testCase id="97056ead-055c-4b63-9265-924c8df153f6" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="TestCase 1" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="97056ead-055c-4b63-9265-924c8df153f6fileName">TestCase-1</con:setting>
+  </con:settings>
+  <con:savedRecentRuns>1</con:savedRecentRuns>
+  <con:testStep type="request" name="SOAP Request" id="fd63a0da-8cec-4c44-b301-41d8eee823fa">
+    <con:settings/>
+    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:interface>DataExportSoap</con:interface>
+      <con:operation>GetClients</con:operation>
+      <con:request name="SOAP Request" id="6b887327-0931-4169-a9d7-a45880e44788">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:encoding>UTF-8</con:encoding>
+        <con:endpoint>https://cd-test.veriforce.net/ws/DataExport</con:endpoint>
+        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:exam="http://www.example.com/">\r
+   <soapenv:Header>\r
+      <exam:authentication>\r
+         <username>WSUSER1</username>\r
+         <password>vf.Testing1</password>\r
+      </exam:authentication>\r
+   </soapenv:Header>\r
+   <soapenv:Body>\r
+      <exam:GetClients>\r
+         <DataExport>\r
+            <ModifiedDate>2018-08-27T09:30:00</ModifiedDate>\r
+         </DataExport>\r
+      </exam:GetClients>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request>
+        <con:assertion type="SOAP Response" id="043edfab-403e-4948-b0d4-3fcc8682944d"/>
+        <con:credentials>
+          <con:selectedAuthProfile>Inherit From Parent</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:wsaConfig mustUnderstand="NONE" version="200508"/>
+        <con:wsrmConfig version="1.2"/>
+      </con:request>
+    </con:config>
+  </con:testStep>
+  <con:properties/>
+  <con:reportParameters/>
+</con:testCase>

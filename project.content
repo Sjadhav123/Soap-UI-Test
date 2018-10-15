@@ -1,0 +1,9 @@
+DataExportSoap\GetClients.xml
+DataExportSoap\GetCompanies.xml
+DataExportSoap\GetContactEmail.xml
+DataExportSoap\GetContractors.xml
+Project-1-TestSuite-1\DataExportSoap-GetClients-GetClients-Request-TestCase.xml
+Project-1-TestSuite-1\DataExportSoap-GetCompanies-GetCompanies-Request-TestCase.xml
+Project-1-TestSuite-1\DataExportSoap-GetContactEmail-GetContactEmail-Request-TestCase.xml
+Project-1-TestSuite-1\DataExportSoap-GetContractors-GetContractors-Request-TestCase.xml
+TestSuite-2\TestCase-1.xml

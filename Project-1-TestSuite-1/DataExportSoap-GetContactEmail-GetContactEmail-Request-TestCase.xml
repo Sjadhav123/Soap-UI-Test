@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testCase id="231a2955-96b5-4da2-9e99-6aed5d49c597" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="DataExportSoap-GetContactEmail-GetContactEmail Request TestCase" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="231a2955-96b5-4da2-9e99-6aed5d49c597fileName">DataExportSoap-GetContactEmail-GetContactEmail-Request-TestCase</con:setting>
+  </con:settings>
+  <con:testStep type="request" id="5fc3d438-a2e4-43e0-8ac8-391ded710b95" name="GetContactEmail GetContactEmail Request">
+    <con:settings/>
+    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:interface>DataExportSoap</con:interface>
+      <con:operation>GetContactEmail</con:operation>
+      <con:request name="GetContactEmail GetContactEmail Request" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="e3083861-03c3-46c3-80c9-4a893c2e708c">
+        <con:settings/>
+        <con:encoding>UTF-8</con:encoding>
+        <con:endpoint>https://cd-test.veriforce.net/ws/DataExport</con:endpoint>
+        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:exam="http://www.example.com/">\r
+   <soapenv:Header>\r
+      <exam:authentication>\r
+         <username>?</username>\r
+         <password>?</password>\r
+      </exam:authentication>\r
+   </soapenv:Header>\r
+   <soapenv:Body>\r
+      <exam:GetContactEmail>\r
+         <Company>?</Company>\r
+         <ContactType>?</ContactType>\r
+      </exam:GetContactEmail>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request>
+        <con:assertion type="SOAP Response" id="cb45234e-7293-4fce-ae51-796c3077ff9a" name="SOAP Response"/>
+        <con:assertion type="Valid HTTP Status Codes" id="7fd9165d-5048-4407-bc89-faf625d3dadd" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>200</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="Schema Compliance" id="71b550a0-53c7-4f26-94fe-b9910f81f003" name="Schema Compliance">
+          <con:configuration/>
+        </con:assertion>
+        <con:assertion type="Response SLA Assertion" id="3e99dd0a-8c55-458d-85b6-38c04789f23d" name="Response SLA">
+          <con:configuration>
+            <SLA>200</SLA>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="SOAP Fault Assertion" id="6f16947f-1616-4f8f-878f-c9ce09b091ad" name="Not SOAP Fault"/>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.example.com/GetContactEmail"/>
+      </con:request>
+    </con:config>
+  </con:testStep>
+  <con:properties/>
+  <con:reportParameters/>
+</con:testCase>

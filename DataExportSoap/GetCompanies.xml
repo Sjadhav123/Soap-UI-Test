@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:operation id="0874e7b4-16cc-4e01-8999-15a6160935cb" isOneWay="false" action="http://www.example.com/GetCompanies" name="GetCompanies" bindingOperationName="GetCompanies" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="0874e7b4-16cc-4e01-8999-15a6160935cbfileName">GetCompanies</con:setting>
+  </con:settings>
+  <con:call id="77e3b675-c7b3-4e73-8f4d-8b004072455d" name="GetCompanies Request">
+    <con:settings/>
+    <con:encoding>UTF-8</con:encoding>
+    <con:endpoint>https://cd-test.veriforce.net/ws/DataExport</con:endpoint>
+    <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:exam="http://www.example.com/">\r
+   <soapenv:Header>\r
+      <exam:authentication>\r
+         <username>?</username>\r
+         <password>?</password>\r
+      </exam:authentication>\r
+   </soapenv:Header>\r
+   <soapenv:Body>\r
+      <exam:GetCompanies>\r
+         <DataExport>\r
+            <ModifiedDate>?</ModifiedDate>\r
+         </DataExport>\r
+      </exam:GetCompanies>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request>
+    <con:credentials>
+      <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+      <con:authType>No Authorization</con:authType>
+    </con:credentials>
+    <con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.example.com/GetCompanies"/>
+  </con:call>
+</con:operation>

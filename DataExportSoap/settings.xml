@@ -1,0 +1,412 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:interface xsi:type="con:WsdlInterface" id="8470374f-3429-4b63-ae6e-1562373bd3bd" wsaVersion="NONE" name="DataExportSoap" type="wsdl" bindingName="{http://www.example.com/}DataExportSoap" soapVersion="1_1" anonymous="optional" definition="https://cd-test.veriforce.net/ws-doc/DataExport?wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="8470374f-3429-4b63-ae6e-1562373bd3bdfileName">DataExportSoap</con:setting>
+  </con:settings>
+  <con:definitionCache type="TEXT" rootPart="https://cd-test.veriforce.net/ws-doc/DataExport?wsdl">
+    <con:part>
+      <con:url>https://cd-test.veriforce.net/ws-doc/DataExport?wsdl</con:url>
+      <con:content><![CDATA[<wsdl:definitions name="DataExport" targetNamespace="http://www.example.com/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:tns="http://www.example.com/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://www.example.com/">
+      <xsd:element name="GetContractors">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="DataExport">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element name="ModifiedDate" type="xsd:dateTime"/>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="GetContractorsResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="Result" minOccurs="0" maxOccurs="unbounded">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element name="Contractor_Company">
+                    <xsd:complexType>
+                      <xsd:sequence>
+                        <xsd:element name="Company" minOccurs="0">
+                          <xsd:complexType>
+                            <xsd:sequence>
+                              <xsd:element name="Name">
+                                <xsd:simpleType>
+                                  <xsd:restriction base="xsd:string">
+                                    <xsd:maxLength value="250"/>
+                                  </xsd:restriction>
+                                </xsd:simpleType>
+                              </xsd:element>
+                              <xsd:element name="VS_CompanyID" type="xsd:long"/>
+                              <xsd:element name="GP_ID" minOccurs="0">
+                                <xsd:simpleType>
+                                  <xsd:restriction base="xsd:string">
+                                    <xsd:maxLength value="200"/>
+                                  </xsd:restriction>
+                                </xsd:simpleType>
+                              </xsd:element>
+                              <xsd:element name="Abbreviation" minOccurs="0">
+                                <xsd:simpleType>
+                                  <xsd:restriction base="xsd:string">
+                                    <xsd:maxLength value="20"/>
+                                  </xsd:restriction>
+                                </xsd:simpleType>
+                              </xsd:element>
+                              <xsd:element name="WebAddress" minOccurs="0">
+                                <xsd:simpleType>
+                                  <xsd:restriction base="xsd:string">
+                                    <xsd:maxLength value="2083"/>
+                                  </xsd:restriction>
+                                </xsd:simpleType>
+                              </xsd:element>
+                              <xsd:element name="CompanyType" minOccurs="0">
+                                <xsd:simpleType>
+                                  <xsd:restriction base="xsd:string">
+                                    <xsd:enumeration value="Client"/>
+                                    <xsd:enumeration value="Contractor"/>
+                                    <xsd:enumeration value="Third_Party_Administrator"/>
+                                    <xsd:enumeration value="Union"/>
+                                  </xsd:restriction>
+                                </xsd:simpleType>
+                              </xsd:element>
+                            </xsd:sequence>
+                          </xsd:complexType>
+                        </xsd:element>
+                      </xsd:sequence>
+                    </xsd:complexType>
+                  </xsd:element>
+                  <xsd:element name="FederalTaxID" minOccurs="0">
+                    <xsd:simpleType>
+                      <xsd:restriction base="xsd:string">
+                        <xsd:maxLength value="200"/>
+                      </xsd:restriction>
+                    </xsd:simpleType>
+                  </xsd:element>
+                  <xsd:element name="DateEstablished" minOccurs="0" type="xsd:dateTime"/>
+                  <xsd:element name="FormOfBusiness" minOccurs="0">
+                    <xsd:simpleType>
+                      <xsd:restriction base="xsd:string">
+                        <xsd:enumeration value="Sole_Owner"/>
+                        <xsd:enumeration value="Partnership"/>
+                        <xsd:enumeration value="Corporation"/>
+                        <xsd:enumeration value="LLC"/>
+                        <xsd:enumeration value="LP"/>
+                        <xsd:enumeration value="Other"/>
+                      </xsd:restriction>
+                    </xsd:simpleType>
+                  </xsd:element>
+                  <xsd:element name="MinorityOwned" type="xsd:boolean"/>
+                  <xsd:element name="UnionAffliated" type="xsd:boolean"/>
+                  <xsd:element name="FullTimeEmployees" minOccurs="0" type="xsd:long"/>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="GetClients">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="DataExport">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element name="ModifiedDate" type="xsd:dateTime"/>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="GetClientsResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="Client" minOccurs="0" maxOccurs="unbounded">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element name="Name">
+                    <xsd:simpleType>
+                      <xsd:restriction base="xsd:string">
+                        <xsd:maxLength value="250"/>
+                      </xsd:restriction>
+                    </xsd:simpleType>
+                  </xsd:element>
+                  <xsd:element name="MendixCompanyID" type="xsd:long"/>
+                  <xsd:element name="GP_ID">
+                    <xsd:simpleType>
+                      <xsd:restriction base="xsd:string">
+                        <xsd:maxLength value="200"/>
+                      </xsd:restriction>
+                    </xsd:simpleType>
+                  </xsd:element>
+                  <xsd:element name="Abbreviation">
+                    <xsd:simpleType>
+                      <xsd:restriction base="xsd:string">
+                        <xsd:maxLength value="20"/>
+                      </xsd:restriction>
+                    </xsd:simpleType>
+                  </xsd:element>
+                  <xsd:element name="WebAddress">
+                    <xsd:simpleType>
+                      <xsd:restriction base="xsd:string">
+                        <xsd:maxLength value="2083"/>
+                      </xsd:restriction>
+                    </xsd:simpleType>
+                  </xsd:element>
+                  <xsd:element name="CompanyType">
+                    <xsd:simpleType>
+                      <xsd:restriction base="xsd:string">
+                        <xsd:enumeration value="Client"/>
+                        <xsd:enumeration value="Contractor"/>
+                        <xsd:enumeration value="Third_Party_Administrator"/>
+                        <xsd:enumeration value="Union"/>
+                      </xsd:restriction>
+                    </xsd:simpleType>
+                  </xsd:element>
+                  <xsd:element name="PreferredBillingMethod">
+                    <xsd:simpleType>
+                      <xsd:restriction base="xsd:string">
+                        <xsd:enumeration value="Email"/>
+                      </xsd:restriction>
+                    </xsd:simpleType>
+                  </xsd:element>
+                  <xsd:element name="Status">
+                    <xsd:simpleType>
+                      <xsd:restriction base="xsd:string">
+                        <xsd:enumeration value="Active"/>
+                        <xsd:enumeration value="Inactive"/>
+                        <xsd:enumeration value="Suspended"/>
+                        <xsd:enumeration value="Cancelled"/>
+                      </xsd:restriction>
+                    </xsd:simpleType>
+                  </xsd:element>
+                  <xsd:element name="StatusReason">
+                    <xsd:simpleType>
+                      <xsd:restriction base="xsd:string">
+                        <xsd:enumeration value="Non_payment"/>
+                        <xsd:enumeration value="Per_Company_Request"/>
+                      </xsd:restriction>
+                    </xsd:simpleType>
+                  </xsd:element>
+                  <xsd:element name="VS_CompanyID" type="xsd:long"/>
+                  <xsd:element name="IsDeleted" type="xsd:boolean"/>
+                  <xsd:element name="IsVeriforce" type="xsd:boolean"/>
+                  <xsd:element name="LastVerified" type="xsd:dateTime"/>
+                  <xsd:element name="IsClient" type="xsd:boolean"/>
+                  <xsd:element name="IsContractor" type="xsd:boolean"/>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="GetCompanies">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="DataExport">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element name="ModifiedDate" type="xsd:dateTime"/>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="GetCompaniesResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="Company" minOccurs="0" maxOccurs="unbounded">
+              <xsd:complexType>
+                <xsd:sequence>
+                  <xsd:element name="Name">
+                    <xsd:simpleType>
+                      <xsd:restriction base="xsd:string">
+                        <xsd:maxLength value="250"/>
+                      </xsd:restriction>
+                    </xsd:simpleType>
+                  </xsd:element>
+                  <xsd:element name="VS_CompanyID" type="xsd:long"/>
+                  <xsd:element name="GP_ID">
+                    <xsd:simpleType>
+                      <xsd:restriction base="xsd:string">
+                        <xsd:maxLength value="200"/>
+                      </xsd:restriction>
+                    </xsd:simpleType>
+                  </xsd:element>
+                  <xsd:element name="Abbreviation">
+                    <xsd:simpleType>
+                      <xsd:restriction base="xsd:string">
+                        <xsd:maxLength value="20"/>
+                      </xsd:restriction>
+                    </xsd:simpleType>
+                  </xsd:element>
+                  <xsd:element name="WebAddress">
+                    <xsd:simpleType>
+                      <xsd:restriction base="xsd:string">
+                        <xsd:maxLength value="2083"/>
+                      </xsd:restriction>
+                    </xsd:simpleType>
+                  </xsd:element>
+                  <xsd:element name="CompanyType">
+                    <xsd:simpleType>
+                      <xsd:restriction base="xsd:string">
+                        <xsd:enumeration value="Client"/>
+                        <xsd:enumeration value="Contractor"/>
+                        <xsd:enumeration value="Third_Party_Administrator"/>
+                        <xsd:enumeration value="Union"/>
+                      </xsd:restriction>
+                    </xsd:simpleType>
+                  </xsd:element>
+                </xsd:sequence>
+              </xsd:complexType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="GetContactEmail">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="Company" type="xsd:long"/>
+            <xsd:element name="ContactType">
+              <xsd:simpleType>
+                <xsd:restriction base="xsd:string">
+                  <xsd:enumeration value="Main"/>
+                  <xsd:enumeration value="Billing"/>
+                  <xsd:enumeration value="OQ"/>
+                  <xsd:enumeration value="DA"/>
+                  <xsd:enumeration value="Training"/>
+                  <xsd:enumeration value="Safety"/>
+                  <xsd:enumeration value="Insurance"/>
+                </xsd:restriction>
+              </xsd:simpleType>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="GetContactEmailResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="Result" type="xsd:string"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="authentication">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="username" type="xsd:string"/>
+            <xsd:element name="password" type="xsd:string"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="GetContractorsRequest">
+    <wsdl:part name="request_header" element="tns:authentication"/>
+    <wsdl:part name="parameters" element="tns:GetContractors"/>
+  </wsdl:message>
+  <wsdl:message name="GetContractorsResponse">
+    <wsdl:part name="result" element="tns:GetContractorsResponse"/>
+  </wsdl:message>
+  <wsdl:message name="GetClientsRequest">
+    <wsdl:part name="request_header" element="tns:authentication"/>
+    <wsdl:part name="parameters" element="tns:GetClients"/>
+  </wsdl:message>
+  <wsdl:message name="GetClientsResponse">
+    <wsdl:part name="result" element="tns:GetClientsResponse"/>
+  </wsdl:message>
+  <wsdl:message name="GetCompaniesRequest">
+    <wsdl:part name="request_header" element="tns:authentication"/>
+    <wsdl:part name="parameters" element="tns:GetCompanies"/>
+  </wsdl:message>
+  <wsdl:message name="GetCompaniesResponse">
+    <wsdl:part name="result" element="tns:GetCompaniesResponse"/>
+  </wsdl:message>
+  <wsdl:message name="GetContactEmailRequest">
+    <wsdl:part name="request_header" element="tns:authentication"/>
+    <wsdl:part name="parameters" element="tns:GetContactEmail"/>
+  </wsdl:message>
+  <wsdl:message name="GetContactEmailResponse">
+    <wsdl:part name="result" element="tns:GetContactEmailResponse"/>
+  </wsdl:message>
+  <wsdl:portType name="DataExportPortType">
+    <wsdl:operation name="GetContractors">
+      <wsdl:documentation/>
+      <wsdl:input message="tns:GetContractorsRequest"/>
+      <wsdl:output message="tns:GetContractorsResponse"/>
+    </wsdl:operation>
+    <wsdl:operation name="GetClients">
+      <wsdl:documentation/>
+      <wsdl:input message="tns:GetClientsRequest"/>
+      <wsdl:output message="tns:GetClientsResponse"/>
+    </wsdl:operation>
+    <wsdl:operation name="GetCompanies">
+      <wsdl:documentation/>
+      <wsdl:input message="tns:GetCompaniesRequest"/>
+      <wsdl:output message="tns:GetCompaniesResponse"/>
+    </wsdl:operation>
+    <wsdl:operation name="GetContactEmail">
+      <wsdl:documentation/>
+      <wsdl:input message="tns:GetContactEmailRequest"/>
+      <wsdl:output message="tns:GetContactEmailResponse"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="DataExportSoap" type="tns:DataExportPortType">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="GetContractors">
+      <soap:operation soapAction="http://www.example.com/GetContractors"/>
+      <wsdl:input>
+        <soap:header message="tns:GetContractorsRequest" part="request_header" use="literal"/>
+        <soap:body parts="parameters" use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetClients">
+      <soap:operation soapAction="http://www.example.com/GetClients"/>
+      <wsdl:input>
+        <soap:header message="tns:GetClientsRequest" part="request_header" use="literal"/>
+        <soap:body parts="parameters" use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCompanies">
+      <soap:operation soapAction="http://www.example.com/GetCompanies"/>
+      <wsdl:input>
+        <soap:header message="tns:GetCompaniesRequest" part="request_header" use="literal"/>
+        <soap:body parts="parameters" use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetContactEmail">
+      <soap:operation soapAction="http://www.example.com/GetContactEmail"/>
+      <wsdl:input>
+        <soap:header message="tns:GetContactEmailRequest" part="request_header" use="literal"/>
+        <soap:body parts="parameters" use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="DataExport">
+    <wsdl:port name="DataExportPort" binding="tns:DataExportSoap">
+      <soap:address location="https://cd-test.veriforce.net/ws/DataExport"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content>
+      <con:type>http://schemas.xmlsoap.org/wsdl/</con:type>
+    </con:part>
+  </con:definitionCache>
+  <con:endpoints>
+    <con:endpoint>https://cd-test.veriforce.net/ws/DataExport</con:endpoint>
+  </con:endpoints>
+</con:interface>

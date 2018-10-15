@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testCase id="1b3a173b-cc91-4647-ad97-d2252d16d097" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="DataExportSoap-GetClients-GetClients Request TestCase" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="1b3a173b-cc91-4647-ad97-d2252d16d097fileName">DataExportSoap-GetClients-GetClients-Request-TestCase</con:setting>
+  </con:settings>
+  <con:savedRecentRuns>1</con:savedRecentRuns>
+  <con:testStep type="request" id="c2629675-7dfe-4e64-bee7-aa2f9c5d511d" name="GetClients GetClients Request">
+    <con:settings/>
+    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:interface>DataExportSoap</con:interface>
+      <con:operation>GetClients</con:operation>
+      <con:request name="GetClients GetClients Request" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="f40ec058-6c04-4ce9-9d4c-5cbbeb67da89">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:encoding>UTF-8</con:encoding>
+        <con:endpoint>https://cd-test.veriforce.net/ws/DataExport</con:endpoint>
+        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:exam="http://www.example.com/">
+   <soapenv:Header>
+      <exam:authentication>
+         <username>WSUSER1</username>
+         <password>vf.Testing1</password>
+      </exam:authentication>
+   </soapenv:Header>
+   <soapenv:Body>
+      <exam:GetClients>
+         <DataExport>
+            <ModifiedDate>2018-08-27T09:30:00</ModifiedDate>
+         </DataExport>
+      </exam:GetClients>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request>
+        <con:assertion type="SOAP Response" id="548429df-5ee8-4b69-b60e-82095c2eefe6" name="SOAP Response"/>
+        <con:assertion type="Valid HTTP Status Codes" id="3ec7d8b8-4276-4109-88b7-0e0d51c5df72" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>200</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="Schema Compliance" id="545f454c-9e0b-4dde-bac2-a508239dfca1" name="Schema Compliance">
+          <con:configuration/>
+        </con:assertion>
+        <con:assertion type="Response SLA Assertion" id="21e2cc51-13ca-4ccf-b78a-8f5cf1498322" name="Response SLA">
+          <con:configuration>
+            <SLA>200</SLA>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="SOAP Fault Assertion" id="818c6941-a77b-4584-a309-af4338b4c041" name="Not SOAP Fault"/>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.example.com/GetClients"/>
+        <con:wsrmConfig version="1.2"/>
+      </con:request>
+    </con:config>
+  </con:testStep>
+  <con:properties/>
+  <con:reportParameters/>
+</con:testCase>

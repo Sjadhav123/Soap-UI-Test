@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:operation id="93115760-8aaf-4adf-8d78-34105445829c" isOneWay="false" action="http://www.example.com/GetContactEmail" name="GetContactEmail" bindingOperationName="GetContactEmail" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="93115760-8aaf-4adf-8d78-34105445829cfileName">GetContactEmail</con:setting>
+  </con:settings>
+  <con:call id="742c6c32-3383-488a-be2d-ed617baa57b7" name="GetContactEmail Request">
+    <con:settings/>
+    <con:encoding>UTF-8</con:encoding>
+    <con:endpoint>https://cd-test.veriforce.net/ws/DataExport</con:endpoint>
+    <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:exam="http://www.example.com/">\r
+   <soapenv:Header>\r
+      <exam:authentication>\r
+         <username>?</username>\r
+         <password>?</password>\r
+      </exam:authentication>\r
+   </soapenv:Header>\r
+   <soapenv:Body>\r
+      <exam:GetContactEmail>\r
+         <Company>?</Company>\r
+         <ContactType>?</ContactType>\r
+      </exam:GetContactEmail>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request>
+    <con:credentials>
+      <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+      <con:authType>No Authorization</con:authType>
+    </con:credentials>
+    <con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.example.com/GetContactEmail"/>
+  </con:call>
+</con:operation>

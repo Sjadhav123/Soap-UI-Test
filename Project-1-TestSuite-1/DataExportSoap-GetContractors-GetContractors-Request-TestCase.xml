@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testCase id="f4053f75-4877-49ef-976a-f3daabd3f2a7" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="DataExportSoap-GetContractors-GetContractors Request TestCase" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="f4053f75-4877-49ef-976a-f3daabd3f2a7fileName">DataExportSoap-GetContractors-GetContractors-Request-TestCase</con:setting>
+  </con:settings>
+  <con:testStep type="request" id="3daffb64-1e63-4429-aa8a-d9519bedb380" name="GetContractors GetContractors Request">
+    <con:settings/>
+    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:interface>DataExportSoap</con:interface>
+      <con:operation>GetContractors</con:operation>
+      <con:request name="GetContractors GetContractors Request" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="f336cbfb-fdd4-4623-981a-57e55efd17b5">
+        <con:settings/>
+        <con:encoding>UTF-8</con:encoding>
+        <con:endpoint>https://cd-test.veriforce.net/ws/DataExport</con:endpoint>
+        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:exam="http://www.example.com/">\r
+   <soapenv:Header>\r
+      <exam:authentication>\r
+         <username>?</username>\r
+         <password>?</password>\r
+      </exam:authentication>\r
+   </soapenv:Header>\r
+   <soapenv:Body>\r
+      <exam:GetContractors>\r
+         <DataExport>\r
+            <ModifiedDate>?</ModifiedDate>\r
+         </DataExport>\r
+      </exam:GetContractors>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request>
+        <con:assertion type="SOAP Response" id="79aeb139-6ae8-4533-b899-c8c3dda95942" name="SOAP Response"/>
+        <con:assertion type="Valid HTTP Status Codes" id="fff41062-8923-4dce-80f7-46641a20df91" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>200</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="Schema Compliance" id="58443081-3247-4fbe-b044-4dd42398c373" name="Schema Compliance">
+          <con:configuration/>
+        </con:assertion>
+        <con:assertion type="Response SLA Assertion" id="add5b8f9-fec1-4bba-8a59-e572e4db57d4" name="Response SLA">
+          <con:configuration>
+            <SLA>200</SLA>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="SOAP Fault Assertion" id="42e671e8-3059-432d-8108-7b00d716c986" name="Not SOAP Fault"/>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.example.com/GetContractors"/>
+      </con:request>
+    </con:config>
+  </con:testStep>
+  <con:properties/>
+  <con:reportParameters/>
+</con:testCase>

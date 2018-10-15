@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testCase id="cb594613-6354-469e-a59a-4202fadeaa6d" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="DataExportSoap-GetCompanies-GetCompanies Request TestCase" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="cb594613-6354-469e-a59a-4202fadeaa6dfileName">DataExportSoap-GetCompanies-GetCompanies-Request-TestCase</con:setting>
+  </con:settings>
+  <con:testStep type="request" id="0745b75a-f25a-4995-bf76-488ba744f52b" name="GetCompanies GetCompanies Request">
+    <con:settings/>
+    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:interface>DataExportSoap</con:interface>
+      <con:operation>GetCompanies</con:operation>
+      <con:request name="GetCompanies GetCompanies Request" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="ef890840-59bc-483e-944f-3cc0a83eb01d">
+        <con:settings/>
+        <con:encoding>UTF-8</con:encoding>
+        <con:endpoint>https://cd-test.veriforce.net/ws/DataExport</con:endpoint>
+        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:exam="http://www.example.com/">\r
+   <soapenv:Header>\r
+      <exam:authentication>\r
+         <username>?</username>\r
+         <password>?</password>\r
+      </exam:authentication>\r
+   </soapenv:Header>\r
+   <soapenv:Body>\r
+      <exam:GetCompanies>\r
+         <DataExport>\r
+            <ModifiedDate>?</ModifiedDate>\r
+         </DataExport>\r
+      </exam:GetCompanies>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request>
+        <con:assertion type="SOAP Response" id="a60fa391-5969-4a16-87f6-571dae932bf5" name="SOAP Response"/>
+        <con:assertion type="Valid HTTP Status Codes" id="872d7ccc-4de9-4704-9f03-7970abfbc2d6" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>200</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="Schema Compliance" id="e9e67b88-399d-4f9a-a18e-0ff14c534a87" name="Schema Compliance">
+          <con:configuration/>
+        </con:assertion>
+        <con:assertion type="Response SLA Assertion" id="c8c6a09e-6ae0-45c9-94e3-2c33832d7aaa" name="Response SLA">
+          <con:configuration>
+            <SLA>200</SLA>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="SOAP Fault Assertion" id="6854bd03-710e-49b0-8829-fb6968aa782f" name="Not SOAP Fault"/>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:wsaConfig mustUnderstand="NONE" version="200508" action="http://www.example.com/GetCompanies"/>
+      </con:request>
+    </con:config>
+  </con:testStep>
+  <con:properties/>
+  <con:reportParameters/>
+</con:testCase>
